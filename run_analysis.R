@@ -49,5 +49,5 @@ allData$subject <- as.factor(allData$subject)
 tidy = aggregate(allData, by=list(activity = allData$activity, subject=allData$subject), mean)
 # Remove the subject and activity column, since a mean of those has no use
 tidy[,90] = NULL
-tidy[,89] = NULL
+tidy[,89] = NULL 
 write.table(tidy, "tidy.txt", sep="\t")
